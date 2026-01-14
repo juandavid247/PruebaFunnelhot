@@ -23,3 +23,7 @@ Si deseas probar el proyecto localmente, solo sigue estos sencillos pasos:
 3.  Inicia el entorno de desarrollo: `npm run dev`.
 4.  Explora el resultado en: `http://localhost:3000`.
 
+
+## Tiempo aproximado de dedicación
+  **12.5 Horas**
+
