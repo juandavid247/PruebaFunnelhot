@@ -1,26 +1,180 @@
 @import "tailwindcss";
 
+@variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand Tokens - Decoupled from Tailwind names to avoid circularity */
+  --brand-primary: #6EC1E4;
+  --brand-secondary: #54595F;
+  --brand-text: #7A7A7A;
+  --brand-accent: #61CE70;
+  --brand-warning: #FFAA4D;
+  --brand-dark: #25293C;
+  --brand-darker: #1A1D2B;
+  --brand-danger: #EB3C62;
+
+  /* Semantic Theme Tokens */
+  --surface-base: #ffffff;
+  --surface-raised: #f8fafc;
+  --surface-overlay: #ffffff;
+
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+
+  --border-standard: #f1f5f9;
+  --border-dim: #f8fafc;
+
+  /* Typography Variables */
+  --font-primary: var(--font-roboto), "Roboto", sans-serif;
+  --font-secondary: var(--font-roboto-slab), "Roboto Slab", serif;
+  --font-text: var(--font-roboto), "Roboto", sans-serif;
+  --font-accent: var(--font-roboto), "Roboto", sans-serif;
+  --font-special: var(--font-figtree), "Figtree", sans-serif;
+
+  --font-weight-primary: 600;
+  --font-weight-secondary: 400;
+  --font-weight-text: 400;
+  --font-weight-accent: 500;
+}
+
+.dark {
+  --background: var(--brand-darker);
+  --foreground: #f1f5f9;
+
+  --surface-base: var(--brand-darker);
+  --surface-raised: var(--brand-dark);
+  --surface-overlay: var(--brand-dark);
+
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+
+  --border-standard: rgba(255, 255, 255, 0.06);
+  --border-dim: rgba(255, 255, 255, 0.03);
+
+  --card-bg: var(--brand-dark);
+  --card-border: rgba(255, 255, 255, 0.04);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Functional Tailwind mapping */
+  --color-primary: var(--brand-primary);
+  --color-secondary: var(--brand-secondary);
+  --color-accent: var(--brand-accent);
+  --color-warning: var(--brand-warning);
+  --color-danger: var(--brand-danger);
+  --color-navy: var(--brand-dark);
+
+  /* Semantic Theme colors */
+  --color-surface-base: var(--surface-base);
+  --color-surface-raised: var(--surface-raised);
+  --color-surface-overlay: var(--surface-overlay);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+
+  --color-border-standard: var(--border-standard);
+  --color-border-dim: var(--border-dim);
+
+  /* Components */
+  --color-card: var(--card-bg);
+  --color-border-card: var(--card-border);
+
+  /* Fonts */
+  --font-sans: var(--font-primary);
+  --font-serif: var(--font-secondary);
+  --font-mono: var(--font-special);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-text);
+  font-weight: var(--font-weight-text);
+  min-height: 100vh;
+}
+
+/* Glassmorphism & Premium Utilities */
+.glass-card {
+  @apply bg-white/70 dark:bg-navy/30 backdrop-blur-xl border border-white/20 dark:border-white/5;
+  box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.05), 0 2px 12px -1px rgba(0, 0, 0, 0.02);
+}
+
+.dark .glass-card {
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+}
+
+.gradient-primary {
+  background: linear-gradient(135deg, var(--brand-primary) 0%, #4a90e2 100%);
+}
+
+.gradient-danger {
+  background: linear-gradient(135deg, var(--brand-danger) 0%, #c02a4a 100%);
+}
+
+/* Custom Utilities based on brand tokens */
+.text-brand-primary {
+  color: var(--brand-primary);
+}
+
+.text-brand-accent {
+  color: var(--brand-accent);
+}
+
+.text-brand-danger {
+  color: var(--brand-danger);
+}
+
+.text-brand-warning {
+  color: var(--brand-warning);
+}
+
+.bg-brand-navy {
+  background-color: var(--brand-dark);
+}
+
+.dark .bg-brand-navy {
+  background-color: var(--brand-darker);
+}
+
+.bg-brand-danger {
+  background-color: var(--brand-danger);
+}
+
+/* Typography Helper Classes */
+.font-primary {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-primary);
+}
+
+.font-secondary {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-secondary);
+}
+
+.font-accent {
+  font-family: var(--font-accent);
+  font-weight: var(--font-weight-accent);
+}
+
+.font-special {
+  font-family: var(--font-special);
+}
+
+/* Scrollbar styling for Premium Feel */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-700 rounded-full transition-colors hover:bg-gray-400 dark:hover:bg-gray-600;
 }

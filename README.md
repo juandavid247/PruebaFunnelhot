@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Gestión de Asistentes IA · Funnelhot
 
-## Getting Started
+¡Bienvenido! Este proyecto es el resultado de un compromiso dedicado por crear no solo una herramienta funcional, sino una experiencia fluida y profesional para la gestión de asistentes inteligentes. He diseñado este módulo pensando en la claridad, la elegancia y, sobre todo, en facilitar el trabajo diario en el ecosistema de **Funnelhot**.
 
-First, run the development server:
+## El Corazón del Proyecto
+Mi objetivo principal fue construir una interfaz que se sintiera viva. Quería que cada acción, desde crear un nuevo asistente hasta configurarlo, fuera intuitiva y gratificante. Para lograr esto, me centré en tres pilares fundamentales:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1.  **Simplicidad Humana:** Una interfaz limpia y profesional que se adapta tanto al día como a la noche (Modo Claro/Oscuro), cuidando siempre la fatiga visual del usuario.
+2.  **Respuesta Instantánea:** Nada es más frustrante que esperar. Por eso, implementé tecnología que permite que los cambios se vean reflejados de inmediato, ofreciendo una sensación de agilidad y robustez.
+3.  **Precisión y Confianza:** El sistema guía al usuario de la mano, asegurando que configuraciones críticas (como la distribución de respuestas) sean exactas y libres de errores.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tecnologías que dan Vida a la App
+Para que todo funcione a la perfección, seleccioné herramientas de vanguardia que garantizan escalabilidad y rendimiento:
+*   **Next.js 15:** Para una base sólida y moderna.
+*   **Manejo de Datos Automático (React Query):** Para que la información fluya sin interrupciones.
+*   **Memoria Global (Zustand):** Para recordar tus preferencias y estados visuales en todo momento.
+*   **Estética Premium (Tailwind + Framer Motion):** Para lograr ese acabado elegante y profesional en cada animación.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Guía de Inicio Rápido
+Si deseas probar el proyecto localmente, solo sigue estos sencillos pasos:
+1.  Asegúrate de tener **Node.js** instalado.
+2.  Instala las dependencias necesarias: `npm install`.
+3.  Inicia el entorno de desarrollo: `npm run dev`.
+4.  Explora el resultado en: `http://localhost:3000`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Un Toque Personal
+Este desarrollo no es solo código; representa aproximadamente **6.5 horas** de trabajo enfocado en la excelencia. Mi mayor desafío fue equilibrar la potencia técnica con una simplicidad que cualquier persona pueda entender sin complicaciones.
 
-## Learn More
+Espero que disfrutes usando este módulo tanto como yo disfruté creándolo.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+*Desarrollado con dedicación técnica y enfoque humano para Funnelhot.*
