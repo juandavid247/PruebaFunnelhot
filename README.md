@@ -23,10 +23,3 @@ Si deseas probar el proyecto localmente, solo sigue estos sencillos pasos:
 3.  Inicia el entorno de desarrollo: `npm run dev`.
 4.  Explora el resultado en: `http://localhost:3000`.
 
-## Un Toque Personal
-Este desarrollo no es solo código; representa aproximadamente **6.5 horas** de trabajo enfocado en la excelencia. Mi mayor desafío fue equilibrar la potencia técnica con una simplicidad que cualquier persona pueda entender sin complicaciones.
-
-Espero que disfrutes usando este módulo tanto como yo disfruté creándolo.
-
----
-*Desarrollado con dedicación técnica y enfoque humano para Funnelhot.*
